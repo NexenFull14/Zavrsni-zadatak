@@ -109,47 +109,6 @@ html{
     color: #0e1e2e;
   }
 
-  #settings {
-    color: white;
-    margin-top: .5em;
-  }
-  
-  #settings:hover {
-    cursor: pointer;
-    animation: spin 0.3s ease-in-out 0.1s 1 normal none;
-  }
-  
-  #settings a {
-    text-decoration: none;
-    color: var(--primary-color);
-  }
-
-  #settings.fa {
-    height: fit-content;
-  }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(180deg);
-    }
-    
-body {
-  margin: 0;
-  color: var(--primary-color);
-  background-image: url("../svg/slika.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 0;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  border: none;
-  font-size: 1.4rem;
-  scroll-behavior: smooth;
-}
-
 .drop-shadow {
   filter: drop-shadow(0 0 0.2rem #111);
 }
@@ -189,14 +148,6 @@ h1[class~="main"] {
   padding: 6rem 0;
 }
 
-.sticky {
-  position: sticky;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: .6em;
-}
-
 .sticky ul {
   position: sticky;
   list-style: none;
@@ -232,6 +183,7 @@ h1[class~="main"] {
 
 #settings {
   color: white;
+  height: fit-content;
 }
 
 #settings:hover {
@@ -260,15 +212,6 @@ h1[class~="main"] {
 
 h2 {
     margin-bottom: 2.5em;
-}
-
-
-.wrapper {
-  width: 50%;
-  height: fit-content;
-  margin-inline: 25%;
-  margin-bottom: 0;
-  text-align: center;
 }
 
 .margin {
@@ -378,8 +321,7 @@ footer{
   margin-top: -100px;
 }
 
-#footer-text
-{
+#footer-text {
   text-align: center;
   width: 100%;
   overflow: hidden;
@@ -387,15 +329,39 @@ footer{
   margin-top: 50px;
 }
 
-@media screen and (max-width: 500px) {
-  #hamburger-menu {
-    display: block;
+  .wrapper {
+    margin: 1em;
+    width: calc(100% - 2.5em);
   }
 
-  .stickynav {
+  .f {
     display: flex;
-    justify-content: left;
-    margin-left: 1em;
+    gap: 1em;
+  }
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+
+  .wrapper {
+    margin: 0;
+    width: calc(100% - 2.5em);
+  }
+
+  .margin {
+    margin: 1em;
+    font-size: medium;
+  }
+}
+    
+@media screen and (max-width: 500px) {
+  .sticky {
+    display: none;
+  }
+
+  body {
+    font-size: small;
   }
 
   .stickynav ul {
@@ -406,60 +372,11 @@ footer{
     display: none;
   }
 
-  .wrapper {
-    margin: 1em;
-    width: calc(100% - 2.5em);
-  }
-
   .margin {
-    margin: 1em;
-    font-size: medium;
-  }
-
-  .f {
-    display: flex;
-    gap: 1em;
+    margin-inline: 1em;
   }
 
   #footer-text {
-  margin-bottom: 8em;
-}
-
-footer {
-  background-color: #0b1a2b;
-  height: 101px;
-  width: 100%;
-}
-
-.margin {
-  margin-inline: 1em;
-}
-
-@media screen and (max-width: 720px) {
-  body {
-    font-size: medium;
-  }
-
-  .sticky ul li a {
-    font-size: small;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  body {
-    font-size: large;
-  }
-
-  .wrapper {
-    margin: 0;
-    width: calc(100% - 2.5em);
-    
-@media screen and (max-width: 500px) {
-  .sticky {
-    display: none;
-  }
-
-  body {
-    font-size: small;
+    margin-bottom: 8em;
   }
 }
