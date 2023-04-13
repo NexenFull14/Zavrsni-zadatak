@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", function (event) {
+
 const toggleCheckbox = document.getElementById('theme-toggle');
 const body = document.body;
 
@@ -18,4 +20,9 @@ toggleCheckbox.addEventListener('change', function() {
   } else {
     localStorage.setItem('theme', 'light');
   }
+});
+
+const DropdownButton = document.querySelector('#hamburger-menu');
+const DropdownMenu = document.querySelector('.stickynav');
+
 });

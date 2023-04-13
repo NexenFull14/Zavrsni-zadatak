@@ -3,16 +3,91 @@ body {
     align-content: center;
     text-align: center;
   }
+
+  nav {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    margin-right: 5em;
+    margin-top: 1em;
+    width: 26%;
+    overflow: hidden;
+    z-index: 1;
+    margin-inline: 37%;
+  }
+    
+  nav ul 
+  {
+  position: sticky;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: none;
+  }
+
+  nav ul li
+  {
+    display: inline-block;
+    border: none;
+  }
+  
+  nav ul li a 
+  {
+    border-radius: 50px;
+    border: none;
+    color: #0e1e2e;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+   body.light-mode nav ul li a:hover 
+  {
+    background-color: #0e1e2e;
+    color: white;
+  }
+
+  #settings {
+    color: white;
+    height: center;
+    float: right;
+    margin-top: 1.2em;
+    margin-right: 50px;
+  }
+  
+  #settings:hover {
+    cursor: pointer;
+    animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+  }
+  
+  #settings a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
   
   body.light-mode {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #0e1e2e;
+    color: #f0f0f0;
     transition: background-color 0.1s;
   }
   
   body.dark-mode {
-    background-color: #333;
-    color: #f0f0f0;
+    background-color: white;
+    color: #0e1e2e;
   }
   
   #container {
@@ -40,12 +115,12 @@ body {
     width: 40px;
     height: 20px;
     outline: none;
-    background-color: #ccc;
+    background-color: #2b6daa;
     transition: background-color 0.2s;
   }
   
   input[type="checkbox"]:checked {
-    background-color: #2b6daa;
+    background-color: #ccc;
   }
   
   input[type="checkbox"]::before {

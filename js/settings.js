@@ -6,11 +6,11 @@ const userPref = localStorage.getItem('theme');
 
 if (userPref === 'dark') {
   toggleCheckbox.checked = true;
-  body.classList.add('dark-mode');
+  body.classList.add('light-mode');
 }
 
 toggleCheckbox.addEventListener('change', function() {
-  body.classList.toggle('dark-mode');
+  body.classList.toggle('light');
 
   // Cuva dark/light mode u local storage
   if (body.classList.contains('dark-mode')) {

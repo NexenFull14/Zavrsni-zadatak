@@ -3,6 +3,139 @@
   --primary-color: #ffff;
 }
 
+
+html{
+  height: 100%;
+}
+
+
+  body {
+    margin: 0;  /*Margin i padding na 0*/
+    padding: 0;
+    color: var(--primary-color);  /*Boja slova i background image*/ 
+    background-image: url("../svg/slika.jpg");  
+    background-repeat: no-repeat;   
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
+    min-height: 100vh; 
+    font-family: 'Poppins', sans-serif; /*font*/
+    font-size: 1.4rem;
+    border: none;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column; 
+    overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
+  }
+  
+  .drop-shadow {
+    filter: drop-shadow(0 0 0.2rem #111);
+  }
+
+  .capital {
+    text-transform: capitalize;
+  }
+  
+  .hover {
+    height: 15rem;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .container {
+    padding: 22rem 0 2rem;
+    margin: 2rem 5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  h1[class~=main] {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 6rem 0;
+  }
+
+
+  .stickynav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: .5em;
+  }
+    
+  .stickynav ul 
+  {
+  position: sticky;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .5em;
+  border: none;
+  }
+  
+  .stickynav #settings {
+    float: right;
+  }
+
+  .stickynav ul li
+  {
+    display: inline-block;
+    border: none;
+  }
+  
+  .stickynav ul li a 
+  {
+    border-radius: 50px;
+    border: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .stickynav ul li a:hover {
+    background-color: white;
+    color: #0e1e2e;
+  }
+
+  #settings {
+    color: white;
+    margin-top: .5em;
+  }
+  
+  #settings:hover {
+    cursor: pointer;
+    animation: spin 0.3s ease-in-out 0.1s 1 normal none;
+  }
+  
+  #settings a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  #settings.fa {
+    height: fit-content;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+    
 body {
   margin: 0;
   color: var(--primary-color);
@@ -120,7 +253,175 @@ h1[class~="main"] {
   }
 }
 
+#hamburger-menu {
+  margin-top: .5em;
+  display: none;
+}
+
 h2 {
+    margin-bottom: 2.5em;
+}
+
+
+.wrapper {
+  width: 50%;
+  height: fit-content;
+  margin-inline: 25%;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.margin {
+  margin-inline: 1em;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+#link {
+  margin-bottom: 100px;
+  width:100%;
+  text-align: center;
+  height: fit-content;
+}
+
+footer{
+    position: sticky;
+    top: 100%;
+    background-color: #0b1a2b;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    width: 100%;
+    margin-top: auto;
+    margin-left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.f {
+  margin-left: 500px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin-right: 5em;
+  margin-top: 1em;
+  width: auto;
+  z-index: 1;
+  height: fit-content;
+  text-decoration: none;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.f li a {
+  border: none;
+  color: #0b1b2a;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+ .fa-facebook {
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-info {
+  border: 1px solid white;
+  width: 17px;
+  height: 17px;
+  background-color: white;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-info li {
+  width: fit-content;
+}
+
+#line {
+  content-visibility: hidden;
+  width: 80%;
+  background-color: white;
+  align-self: center;
+  height: 1px;
+  margin-top: -100px;
+}
+
+#footer-text
+{
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+@media screen and (max-width: 500px) {
+  #hamburger-menu {
+    display: block;
+  }
+
+  .stickynav {
+    display: flex;
+    justify-content: left;
+    margin-left: 1em;
+  }
+
+  .stickynav ul {
+    display: none;
+  }
+
+  .stickynav #settings {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 1em;
+    width: calc(100% - 2.5em);
+  }
+
+  .margin {
+    margin: 1em;
+    font-size: medium;
+  }
+
+  .f {
+    display: flex;
+    gap: 1em;
+  }
+
+  #footer-text {
   margin-bottom: 8em;
 }
 
@@ -144,6 +445,15 @@ footer {
   }
 }
 
+@media screen and (max-width: 720px) {
+  body {
+    font-size: large;
+  }
+
+  .wrapper {
+    margin: 0;
+    width: calc(100% - 2.5em);
+    
 @media screen and (max-width: 500px) {
   .sticky {
     display: none;
