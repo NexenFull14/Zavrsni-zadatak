@@ -1,6 +1,20 @@
 /*Page style*/
+@property --clr-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #dadfc7;
+}
+
+@property --clr-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #9aaae0;
+}
+
 :root {
-  --linear-gradient: linear-gradient(#306283, #9aaae0);
+  --linear-gradient: linear-gradient(#306283, var(--clr-2));
+  --clr-1: #dadfc7;
+  --clr-2: #9aaae0;
 }
 
 body {
@@ -20,7 +34,7 @@ body {
 
 .button-style { 
   background-image: var(--linear-gradient);
-  color: #dadfc7;
+  color: var(--clr-1);
   font-weight: bold;
   text-align: center;
   border: none;
@@ -92,7 +106,7 @@ header {
 }
 
 nav {
-  background-image: linear-gradient(#306283, #9aaae0);
+  background-image: linear-gradient(#306283, var(--clr-2));
   min-width: -moz-fit-content;
   min-width: fit-content;
   overflow: hidden;
@@ -117,7 +131,7 @@ nav ul li
 nav ul li a 
 {
   border: none;
-  color: #dadfc7;
+  color: var(--clr-1);
   display: block;
   padding: 10px;
   text-align: center;
@@ -139,7 +153,7 @@ code {
   border-radius: 3px;
   padding: 0.1rem;
   margin: 0.2rem;
-  color: #dadfc7;
+  color: var(--clr-1);
   font-size: 1.4rem;
 }
 
@@ -242,7 +256,7 @@ code {
   text-align: center;
   background-color: #306283;
   text-decoration: none;
-  color: #dadfc7;
+  color: var(--clr-1);
   width: 100px;
   height: 100px;
   transition: width 2s;
@@ -279,8 +293,20 @@ code {
 }
 
 .background-color:hover {
-  background-image: linear-gradient(#dadfc7, #9aaae0);
+  background-image: linear-gradient(var(--clr-1), var(--clr-2));
   color: #1c3f55;
+}
+
+.solution {
+  background-image: linear-gradient(var(--clr-1), var(--clr-2));
+  transition: --clr-1 1000ms, --clr-2 1000ms;
+  border: none;
+  font-weight: bold;
+}
+
+.solution:hover {
+  --clr-1: #9aaae0;
+  --clr-2: #dadfc7;
 }
 
 .margin {
@@ -297,83 +323,16 @@ code {
 }
 .tutorial-list a {
   text-decoration: none;
-  color: #dadfc7;
+  color: var(--clr-1);
   padding: 0.5rem;
 }
 .tutorial-list a:hover {
-  background-color: #dadfc7;
+  background-color: var(--clr-1);
   color: var(--linear-gradient-clr1);
 }
 
 /*Main page*/
-.animation-parent {
-  display: grid;
-  position: absolute;
-  gap: 1rem;
-  grid-template-columns: repeat(12, 0.5fr);
-  margin: 10rem auto;
-}
-.animation-parent .animation-child {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 100%;
-  background-color: #111;
-  animation: circle-animation 2s ease-in-out alternate infinite;
-}
 
-.animation-child:nth-child(1) {
-  animation-delay: calc(sin(15deg) * 1s);
-}
-
-.animation-child:nth-child(2) {
-  animation-delay: calc(sin(15deg) * 2s);
-}
-
-.animation-child:nth-child(3) {
-  animation-delay: calc(sin(15deg) * 3s);
-}
-
-.animation-child:nth-child(4) {
-  animation-delay: calc(sin(15deg) * 4s);
-}
-
-.animation-child:nth-child(5) {
-  animation-delay: calc(sin(15deg) * 5s);
-}
-
-.animation-child:nth-child(6) {
-  animation-delay: calc(sin(15deg) * 6s);
-}
-
-.animation-child:nth-child(7) {
-  animation-delay: calc(sin(15deg) * 7s);
-}
-
-.animation-child:nth-child(8) {
-  animation-delay: calc(sin(15deg) * 8s);
-}
-
-.animation-child:nth-child(9) {
-  animation-delay: calc(sin(15deg) * 9s);
-}
-
-.animation-child:nth-child(10) {
-  animation-delay: calc(sin(15deg) * 10s);
-}
-
-.animation-child:nth-child(11) {
-  animation-delay: calc(sin(15deg) * 11s);
-}
-
-.animation-child:nth-child(12) {
-  animation-delay: calc(sin(15deg) * 12s);
-}
-
-@keyframes circle-animation {
-  to {
-    transform: translateY(-70px);
-  }
-}
 h1 {
   display: flex;
   justify-content: center;

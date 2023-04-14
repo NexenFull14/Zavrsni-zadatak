@@ -118,7 +118,8 @@
     <article>
       <h2 id="Transition-timing-function" class="margin-title">Transition timing function</h2>
       <p class="margin">
-        The <code>transition-timing-function</code> property in CSS specifies the speed curve of an element's transition over time.
+        The <code>transition-timing-function</code> property in CSS specifies the speed curve of an element's transition
+        over time.
         It determines how intermediate values are calculated for a transition between two states, such as changing the
         color or position of an element.
       </p>
@@ -126,7 +127,8 @@
       <article class="bottom-line">
         <img src="svg/transition-timing-function.png" alt="Transition Properties" class="transition-example">
         <p>
-          This <code>cubic-bezier()</code> curve creates a transition effect that starts slowly, speeds up quickly, and then slows down again at the end.
+          This <code>cubic-bezier()</code> curve creates a transition effect that starts slowly, speeds up quickly, and
+          then slows down again at the end.
         </p>
       </article>
     </article>
@@ -134,8 +136,77 @@
     <article>
       <h2 id="Transition-delay" class="margin-title">Transition delay</h2>
       <p class="margin">
-        <code>Transition-delay</code> is a CSS property that specifies the delay before a transition effect starts.
+        The <code>transition-delay</code> property in CSS is used to specify the amount of time to wait before starting
+        a CSS transition effect. This property can be used in combination with the <code>transition-duration</code>,
+        <code>transition-property</code>, and <code>transition-timing-function</code> properties to create more complex
+        transition effects.
       </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-delay.png" alt="Transition Delay" class="transition-example">
+        <p class="margin">
+          In this code we set <code>transition-delay</code> on <code>text</code> element which means that animation will
+          run after <code>0.3s</code>.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-bad-example" class="margin-title">Don't write all of that code!</h2>
+      <p class="margin">
+        When you work with transitions, you don't need to write all properties because it will take more time for site
+        to
+        response, but we don't need that because project need to be fast.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-bad-example.png" alt="Transition Delay" class="transition-example">
+        <p class="margin">
+          This is the example of bad code. Waste of time and site will probably become slower.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-example" class="margin-title">Instead, do this!</h2>
+      <p class="margin">
+        As we said, speed of site is important. Code below will show you how you can write previous code in lot easier
+        way.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-syntax.png" alt="Transition Delay" class="transition-example">
+        <p class="margin">
+          This code is syntax for <code>transition</code> effect. You need to declare properties in this order!
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="linear-gradient-bad-example" class="margin-title">How to set transition on linear-gradient?</h2>
+      <p class="margin">
+        The linear-gradient function in CSS is used to create a gradient effect that transitions between two or more
+        colors in a linear direction. This function can be used to create a variety of effects, such as color fades,
+        background gradients, and more. But how can we set transition on it?
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/linear-gradient-bad-example.png" alt="Transition Delay" class="transition-example">
+        <p class="margin">
+          This code don't work. That is exactly what we made in previous example with hover square.
+          Solution for that problem is little tricky but you will learn something new.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Solution" class="margin-title">Solution for linear-gradient transition</h2>
+      <p class="margin">
+        When we want to set transition on <code>linear-gradient</code>
+      </p>
+      <article class="bottom-line">
+        <button class="hover-button solution">HOVER</button>
+      </article>
     </article>
   </section>
 </body>

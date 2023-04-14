@@ -62,13 +62,12 @@ html{
 
   .stickynav {
     display: flex;
+    justify-content: center;
     width: 100%;
-    justify-content: space-around;
-    margin-top: .5em;
+    margin-top: 1em;
   }
     
-  .stickynav ul 
-  {
+  .stickynav ul {
   position: sticky;
   list-style: none;
   justify-content: center;
@@ -80,8 +79,21 @@ html{
   border: none;
   }
   
-  .stickynav #settings {
-    float: right;
+#settings {
+  height: fit-content;
+  position: relative;
+  top: .7rem;
+  left: 20rem;
+}
+
+  #settings:hover {
+    cursor: pointer;
+    animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+  }
+  
+  #settings a {
+    text-decoration: none;
+    color: var(--primary-color);
   }
 
   .stickynav ul li
@@ -100,7 +112,7 @@ html{
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     transition: all 0.3s ease-in-out;
   }
   
@@ -148,54 +160,6 @@ h1[class~="main"] {
   padding: 6rem 0;
 }
 
-.sticky ul {
-  position: sticky;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: 1em;
-  border: none;
-}
-
-.sticky ul li {
-  display: inline-block;
-  border: none;
-}
-
-.sticky ul li a {
-  border-radius: 50px;
-  border: none;
-  color: #dadfc7;
-  display: block;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.sticky ul li a:hover {
-  background-color: white;
-  color: #0e1e2e;
-}
-
-#settings {
-  color: white;
-  height: fit-content;
-}
-
-#settings:hover {
-  cursor: pointer;
-  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
-}
-
-#settings a {
-  text-decoration: none;
-  color: var(--primary-color);
-}
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -205,10 +169,6 @@ h1[class~="main"] {
   }
 }
 
-#hamburger-menu {
-  margin-top: .5em;
-  display: none;
-}
 
 h2 {
     margin-bottom: 2.5em;
@@ -332,26 +292,23 @@ footer{
   .wrapper {
     margin: 1em;
     width: calc(100% - 2.5em);
+    width: 60%;
+    margin-inline: 20%; 
   }
 
-  .f {
-    display: flex;
-    gap: 1em;
-  }
 
 @media screen and (max-width: 720px) {
   body {
     font-size: medium;
   }
 
-  .wrapper {
-    margin: 0;
-    width: calc(100% - 2.5em);
-  }
-
   .margin {
     margin: 1em;
     font-size: medium;
+  }
+
+  .stickynav ul li a {
+    font-size: 1rem;
   }
 }
     
