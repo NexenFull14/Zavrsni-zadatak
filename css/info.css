@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+
 body {
     margin: 0;  /*Margin i padding na 0*/
     padding: 0;
@@ -59,7 +61,6 @@ body {
     padding: 6rem 0;
   }
 
-
   .stickynav {
     display: flex;
     justify-content: center;
@@ -80,8 +81,20 @@ body {
   }
   
 #settings {
-  margin-left: 95vw;
-  margin-top: -2em;
+  height: fit-content;
+  position: relative;
+  top: .7rem;
+  left: 20rem;
+}
+
+  #settings:hover {
+    cursor: pointer;
+    animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+  }
+  
+  #settings a {
+    text-decoration: none;
+    color: var(--primary-color);
   }
 
   .stickynav ul li
@@ -141,6 +154,36 @@ body {
     margin-left: 25px;
     margin-top: -19px;
     font-size: 16px;
+ }
+
+ .adplace1 {
+  width: 400px;
+  height: 840px;
+  align-self: left;
+  margin-left: 60px;
+  position: absolute;
+  left: 40px;
+  top: 200px;
+  background-color: #13273a;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+
+ .adplace2 {
+  width: 400px;
+  height: 840px;
+  align-self: right;
+  margin-right: 60px;
+  position: absolute;
+  right: 40px;
+  top: 200px;
+  background-color: #13273a;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
  }
 
   footer{
@@ -243,4 +286,73 @@ body {
   overflow: hidden;
   font-size: 15px;
   margin-top: 50px;
+}
+
+@media screen and (max-width: 720px) {
+  .adplace1 {
+    display: none;
+  }
+
+  .adplace2 {
+    display: none;
+  }
+
+  .wrapper {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .adplace1 {
+    display: none;
+  }
+
+  .adplace2 {
+    display: none;
+  }
+
+  .wrapper {
+    font-size: 15px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .adplace1 {
+    display: none;
+  }
+
+  .adplace2 {
+    display: none;
+  }
+
+  .wrapper {
+    font-size: 15px;
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .adplace1 {
+    display: none;
+  }
+
+  .adplace2 {
+    display: none;
+  }
+
+  .wrapper {
+    font-size: 15px;
+    width: 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }

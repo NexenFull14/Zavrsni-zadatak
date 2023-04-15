@@ -17,6 +17,18 @@
   --clr-2: #9aaae0;
 }
 
+.solution {
+  background-image: linear-gradient(var(--clr-1), var(--clr-2));
+  transition: --clr-1 1000ms, --clr-2 1000ms;
+  border: none;
+  font-weight: bold;
+}
+
+.solution:hover {
+  --clr-1: #9aaae0;
+  --clr-2: #dadfc7;
+}
+
 body {
   margin: 0;
   color: #1c3f58;
@@ -295,18 +307,6 @@ code {
 .background-color:hover {
   background-image: linear-gradient(var(--clr-1), var(--clr-2));
   color: #1c3f55;
-}
-
-.solution {
-  background-image: linear-gradient(var(--clr-1), var(--clr-2));
-  transition: --clr-1 1000ms, --clr-2 1000ms;
-  border: none;
-  font-weight: bold;
-}
-
-.solution:hover {
-  --clr-1: #9aaae0;
-  --clr-2: #dadfc7;
 }
 
 .margin {

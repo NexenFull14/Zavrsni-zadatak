@@ -1,0 +1,50 @@
+.floating-circle {
+    width: 1em;
+    height: 1em;
+    background: #0a0a0a;
+    border-radius: 50%;
+}
+
+.circle-animation1 {
+    transform: 
+    translateX(11.5em)
+    translateY(1.5em);
+    animation: Float 2s ease-in-out infinite alternate;
+}
+
+.circle-animation2 {
+    transform:
+    translateX(5em)
+    translateY(-6em);
+    animation: Float2 2s ease-in-out infinite alternate;
+}
+
+.circle-animation3 {
+    transform:
+    translateX(11.5em)
+    translateY(-7em);
+    animation: Float3 2s ease-in-out infinite alternate;
+}
+
+@keyframes Float {
+    to {
+        transform:
+        translateX(11.5em)
+        translateY(-5em);
+    }
+}
+
+@keyframes Float2 {
+    to {
+        transform:
+        translateX(11.5em);
+    }
+}
+
+@keyframes Float3 {
+    to {
+        transform:
+        translateX(5em)
+        translateY(-7em);
+    }
+}

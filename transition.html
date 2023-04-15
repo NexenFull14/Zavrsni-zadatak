@@ -5,9 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="svg/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transition tutorials</title>
+  <title>Transitions in CSS</title>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
     </ul>
   </nav>
 
-  <h1 class="main">CSS animation and transition tutorials</h1>
+  <h1 class="main">CSS transition tutorial</h1>
 
   <div class="hover bottom-line">
     <p class="description center">Hover text below for little surprise!</p>
@@ -200,15 +201,90 @@
     </article>
 
     <article>
-      <h2 id="Solution" class="margin-title">Solution for linear-gradient transition</h2>
+      <h2 id="Solution" class="margin-title">Full code for solution</h2>
       <p class="margin">
-        When we want to set transition on <code>linear-gradient</code>
+        Code below is solution for <code>linear-gradient</code> transition. Don't worry, we will explain every line of
+        code later.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/linear-gradient-solution.png" alt="linear-gradient Solution Code">
+      </article>
+    </article>
+
+    <article>
+      <h2 id=":root-pseudo" class="margin-title">:root pseudo class</h2>
+      <p class="margin">
+        Firstly, let's talk about <code>:root</code> pseudo-class. <code>:root</code> is a pseudo-class in CSS that
+        matches the root element of a document, which is usually the
+        <code>html</code> element. It can be used to define global CSS variables, which can be used throughout the
+        entire document.
+      </p>
+      <article class="bottom-line">
+        <img src="svg/global-variables.png" alt="Global Variables">
+        <p class="margin">
+          Here you can see that we declared <code>--linear-gradient</code>, <code>--clr-1</code> and
+          <code>--clr-2</code> as global variables. You can set those variables with <code>var()</code> function on
+          every element you want. When you change value in <code>:root</code>, it will change in every element with
+          <code>var()</code> function.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="@property-at-rule" class="margin-title">@property at-rule</h2>
+      <p class="margin">
+        We came to important thing if you want <code>linear-gradient</code> transition to work. The
+        <code>@property</code> at-rule in
+        CSS is used to define custom properties, also known as CSS variables. Custom properties allow you to define
+        values that can be reused throughout your CSS code, making it easier to maintain and update your styles.
+      </p>
+      <article class="bottom-line">
+        <img src="svg/@property-at-rule.png" alt="Global Variables">
+        <p class="margin">
+          With <code>@property</code> at-rule, you can set <code>linear-gradient</code> colors to be animatable.
+          <code>Background-image</code> is not animatable property! <code>Syntax</code> is set to <code>color</code>
+          because browser can now recognize <code>--clr-1</code> and <code>--clr-2</code> as colors. The
+          <code>initial-value</code> property sets the default value for the properties. In this case, default values is
+          colors from <code>linear-gradient</code>.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Final-steps" class="margin-title">Final steps</h2>
+      <p class="margin">
+        Here we need to set <code>transition</code> property with our custom properties and we need
+        <code>transition-timing-function</code> for each, in this example we set <code>1000ms</code>.
+      </p>
+      <article class="bottom-line">
+        <img src="svg/solution-code.png" alt="Global Variables">
+      </article>
+    </article>
+
+    <article>
+      <p class="margin">
+        For last thing, we need to set <code>:hover</code> to make transition on hover.
+      </p>
+      <article class="bottom-line">
+        <img src="svg/solution-code-hover.png" alt="Global Variables">
+      </article>
+    </article>
+
+    <article>
+      <p class="margin">
+        And voila! We now have out <code>linear-gradient</code> transition! Little complex but worth it.
       </p>
       <article class="bottom-line">
         <button class="hover-button solution">HOVER</button>
+        <p class="margin">
+          That's it for transitions! Click button below to go onto next tutorial!
+        </p>
       </article>
     </article>
+    <a href="animation.html">Click me!</a>
   </section>
+
 </body>
 
 </html>
