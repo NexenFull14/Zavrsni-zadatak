@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/transition.css">
   <link rel="shortcut icon" href="svg/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,38 +13,46 @@
 
 <body>
 
-  <nav class="sticky">
-    <i style="font-size:24px" id="settings" class="fa"><a href="settings.html">&#xf013;</a></i>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">About us</a></li>
-      <li><a href="tutorials.html">Tutorials</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav class="stickynav">
 
-  <h1 class="main">CSS transition tutorial</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="info.html">Info</a></li>
+        <li><a href="tutorials.html">Tutorials</a></li>
+      </ul>
 
-  <div class="hover bottom-line">
-    <p class="description center">Hover text below for little surprise!</p>
+      <i style="font-size: 24px" id="settings" class="fa">&#xf013;</i>
+
+    </nav>
+  </header>
+
+<div class = "content">
+  <div class = "section-wrapper-neutral">
+  <h1 class="main"><b class = "pink">CSS transition tutorial</b></h1>
+
+    <p class="description center"><b class = "green">Hover text below for little surprise!</b></p>
     <div class="center">
-      <button class="zoom button-style">Hover me :)</button>
+      <button class="zoom button-style">Hover me</button>
     </div>
   </div>
 
-  <h3 class="hyperlink-title">Today you will learn:</h3>
+  <div class = "section-wrapper-neutral">
+  <h3 class="hyperlink-title"><b class = "yellow">Today you will learn:</b></h3>
 
   <ol class="hyperlink-list">
     <li><a href="#Transition">What is transition?</a></li>
     <li><a href="#Transition-examples">How can you use it?</a></li>
     <li><a href="#Transition-properties">Transition properties</a></li>
   </ol>
+</div>
 
   <section>
+    <div class = "section-wrapper">
     <article class="transition">
-      <h2 id="Transition" class="margin-title ">What is transition?</h2>
+      <h2 id="Transition" class="margin-title "><b class = "orange">What is transition?</b></h2>
       <p class="margin">
-        <code>CSS transitions</code> provide a way to control animation speed when changing CSS properties. Instead of
+        <b class = "green">CSS transitions</b> provide a way to control animation speed when changing CSS properties. Instead of
         having
         property changes take effect immediately, you can cause the changes in a property to take place over a period of
         time.
@@ -52,22 +60,23 @@
         With CSS transitions enabled,
         changes occur at time intervals that follow an acceleration curve. But as you see on second hover button nothing
         changed.
-        That is because <code>linear-gradient()</code> is not property that can be animated. Solution for that problem
+        That is because <b class = "green">linear-gradient()</b> is not property that can be animated. Solution for that problem
         is on later tutorial.
       </p>
       <button class="hover-button border-radius button-style">HOVER</button>
-      <button class="hover-button background-color button-style">HOVER</button>
+      <button class="hover-button background-color button-style" id = "simple=">HOVER</button>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-examples" class="margin-title">How can you use CSS transitions?</h2>
+      <h2 id="Transition-examples" class="margin-title"><b class = "orange">How can you use CSS transitions?</b></h2>
       <p class="margin">
-        To use CSS transitions, you must specify two things: the CSS <code>property</code> you want to add an effect
+        To use CSS transitions, you must specify two things: the CSS <b class = "green">property</b> you want to add an effect
         to and the
-        <code>duration</code> of the effect. If the duration part is not specified, the transition will have no effect
+        <b class ="green">duration</b> of the effect. If the duration part is not specified, the transition will have no effect
         because its
-        <code>default value is 0</code>.
-
+        <b class ="green">default value is 0</b>.
         Here's an example that shows a div element with a transition on its width property:
       </p>
 
@@ -79,14 +88,16 @@
         <p>
           This code specifies that when a user hovers over the div element, its width property will transition from
           100px to 300px over a period of 2s (2 seconds). In line 5, you can see how we set
-          <code>transition-property(width)</code> and <code>transition-duration(2s)</code>.
+          <b class = "green">transition-property(width)</b> and <b class = "green">transition-duration(2s)</b>.
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-properties" class="margin-title">Transition properties</h2>
-      <p class="margin">The <code>transition-property</code> sets the CSS properties to which a transition effect
+      <h2 id="Transition-properties" class="margin-title"><b class = "orange">Transition properties</b></h2>
+      <p class="margin">The <b class = "green">transition-property</b> sets the CSS properties to which a transition effect
         should be applied. It specifies the name of the CSS property the transition effect is for. The transition effect
         will start when the specified CSS property changes value. You can specify one or more CSS properties to apply
         the transition effect to.
@@ -96,30 +107,34 @@
         <img src="svg/transition-property.png" alt="Transition Properties" class="transition-example">
         <p>
           Here you can see how to set transition property to element. If you want
-          all properties to have transition effect, just set <code>transition-property: all;</code>.
+          all properties to have transition effect, just set <b class = "green">transition-property: all;</b>.
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-duration" class="margin-title">Transition duration</h2>
+      <h2 id="Transition-duration" class="margin-title"><b class = "orange">Transition duration</b></h2>
       <p class="margin">
-        <code>Transition-duration</code> is a CSS property that specifies the duration over which a CSS transition
+        <b class = "green">Transition-duration</b> is a CSS property that specifies the duration over which a CSS transition
         should occur. This property takes a value in seconds (s) and milliseconds (ms).
       </p>
 
       <article class="bottom-line">
         <img src="svg/transition-duration.png" alt="Transition Properties" class="transition-example">
         <p>
-          Here you can see how we added <code>transition-duration</code> property to <code>text</code> element.
+          Here you can see how we added <b class = "green">transition-duration</b> property to <b class = "green">text</b> element.
         </p>
       </article>
     </article>
+  </div>
 
+    <div class ="section-wrapper">
     <article>
-      <h2 id="Transition-timing-function" class="margin-title">Transition timing function</h2>
+      <h2 id="Transition-timing-function" class="margin-title"><b class = "orange">Transition timing function</b></h2>
       <p class="margin">
-        The <code>transition-timing-function</code> property in CSS specifies the speed curve of an element's transition
+        The <b class = "green">transition-timing-function</b> property in CSS specifies the speed curve of an element's transition
         over time.
         It determines how intermediate values are calculated for a transition between two states, such as changing the
         color or position of an element.
@@ -128,32 +143,36 @@
       <article class="bottom-line">
         <img src="svg/transition-timing-function.png" alt="Transition Properties" class="transition-example">
         <p>
-          This <code>cubic-bezier()</code> curve creates a transition effect that starts slowly, speeds up quickly, and
+          This <b class = "green">cubic-bezier()</b> curve creates a transition effect that starts slowly, speeds up quickly, and
           then slows down again at the end.
         </p>
       </article>
     </article>
+  </div>
 
+  <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-delay" class="margin-title">Transition delay</h2>
+      <h2 id="Transition-delay" class="margin-title"><b class = "orange">Transition delay</b></h2>
       <p class="margin">
-        The <code>transition-delay</code> property in CSS is used to specify the amount of time to wait before starting
-        a CSS transition effect. This property can be used in combination with the <code>transition-duration</code>,
-        <code>transition-property</code>, and <code>transition-timing-function</code> properties to create more complex
+        The <b class = "green">transition-delay</b> property in CSS is used to specify the amount of time to wait before starting
+        a CSS transition effect. This property can be used in combination with the <b class = "green">transition-duration</b>,
+        <b class ="green">transition-property</b>, and <b class = "green">transition-timing-function</b> properties to create more complex
         transition effects.
       </p>
 
       <article class="bottom-line">
         <img src="svg/transition-delay.png" alt="Transition Delay" class="transition-example">
         <p class="margin">
-          In this code we set <code>transition-delay</code> on <code>text</code> element which means that animation will
-          run after <code>0.3s</code>.
+          In this code we set <b class = "green">transition-delay</b> on <b class = "green">text</b> element which means that animation will
+          run after <b class = "green">0.3s</b>.
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-bad-example" class="margin-title">Don't write all of that code!</h2>
+      <h2 id="Transition-bad-example" class="margin-title"><b class = "orange">Don't write all of that code!</b></h2>
       <p class="margin">
         When you work with transitions, you don't need to write all properties because it will take more time for site
         to
@@ -167,9 +186,11 @@
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Transition-example" class="margin-title">Instead, do this!</h2>
+      <h2 id="Transition-example" class="margin-title"><b class ="orange">Instead, do this!</b></h2>
       <p class="margin">
         As we said, speed of site is important. Code below will show you how you can write previous code in lot easier
         way.
@@ -178,13 +199,15 @@
       <article class="bottom-line">
         <img src="svg/transition-syntax.png" alt="Transition Delay" class="transition-example">
         <p class="margin">
-          This code is syntax for <code>transition</code> effect. You need to declare properties in this order!
+          This code is syntax for <b class = "green">transition</b> effect. You need to declare properties in this order!
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="linear-gradient-bad-example" class="margin-title">How to set transition on linear-gradient?</h2>
+      <h2 id="linear-gradient-bad-example" class="margin-title"><b class = "orange">How to set transition on linear-gradient?</b></h2>
       <p class="margin">
         The linear-gradient function in CSS is used to create a gradient effect that transitions between two or more
         colors in a linear direction. This function can be used to create a variety of effects, such as color fades,
@@ -199,11 +222,13 @@
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Solution" class="margin-title">Full code for solution</h2>
+      <h2 id="Solution" class="margin-title"><b class = "orange">Full code for solution</b></h2>
       <p class="margin">
-        Code below is solution for <code>linear-gradient</code> transition. Don't worry, we will explain every line of
+        Code below is solution for <b class = "green">linear-gradient</b> transition. Don't worry, we will explain every line of
         code later.
       </p>
 
@@ -211,79 +236,102 @@
         <img src="svg/linear-gradient-solution.png" alt="linear-gradient Solution Code">
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id=":root-pseudo" class="margin-title">:root pseudo class</h2>
+      <h2 id=":root-pseudo" class="margin-title"><b class = "orange">:root pseudo class</b></h2>
       <p class="margin">
-        Firstly, let's talk about <code>:root</code> pseudo-class. <code>:root</code> is a pseudo-class in CSS that
+        Firstly, let's talk about <b class = "green">:root</b> pseudo-class. <b class = "green">:root</b> is a pseudo-class in CSS that
         matches the root element of a document, which is usually the
-        <code>html</code> element. It can be used to define global CSS variables, which can be used throughout the
+        <b class = "green">html</b> element. It can be used to define global CSS variables, which can be used throughout the
         entire document.
       </p>
       <article class="bottom-line">
         <img src="svg/global-variables.png" alt="Global Variables">
         <p class="margin">
-          Here you can see that we declared <code>--linear-gradient</code>, <code>--clr-1</code> and
-          <code>--clr-2</code> as global variables. You can set those variables with <code>var()</code> function on
-          every element you want. When you change value in <code>:root</code>, it will change in every element with
-          <code>var()</code> function.
+          Here you can see that we declared <b class = "green">--linear-gradient</b>, <b class = "green">--clr-1</b> and
+          <b class = "green">--clr-2</b> as global variables. You can set those variables with <b class = "green">var()</b> function on
+          every element you want. When you change value in <b class = "green">:root</b>, it will change in every element with
+          <b class = "green">var()</b> function.
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="@property-at-rule" class="margin-title">@property at-rule</h2>
+      <h2 id="@property-at-rule" class="margin-title"><b class = "orange">@property at-rule</b></h2>
       <p class="margin">
-        We came to important thing if you want <code>linear-gradient</code> transition to work. The
-        <code>@property</code> at-rule in
+        We came to important thing if you want <b class = "green">linear-gradient</b> transition to work. The
+        <b class = "green">@property</b> at-rule in
         CSS is used to define custom properties, also known as CSS variables. Custom properties allow you to define
         values that can be reused throughout your CSS code, making it easier to maintain and update your styles.
       </p>
       <article class="bottom-line">
         <img src="svg/@property-at-rule.png" alt="Global Variables">
         <p class="margin">
-          With <code>@property</code> at-rule, you can set <code>linear-gradient</code> colors to be animatable.
-          <code>Background-image</code> is not animatable property! <code>Syntax</code> is set to <code>color</code>
-          because browser can now recognize <code>--clr-1</code> and <code>--clr-2</code> as colors. The
-          <code>initial-value</code> property sets the default value for the properties. In this case, default values is
-          colors from <code>linear-gradient</code>.
+          With <b class = "green">@property</b> at-rule, you can set <b class = "green">linear-gradient</b> colors to be animatable.
+          <b class = "green">Background-image</b> is not animatable property! <b class = "green">Syntax</b> is set to <b class = "green">color</b>
+          because browser can now recognize <b class = "green">--clr-1</b> and <b class = "green">--clr-2</b> as colors. The
+          <b class = "green">initial-value</b> property sets the default value for the properties. In this case, default values is
+          colors from <b class = "green">linear-gradient</b>.
         </p>
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
-      <h2 id="Final-steps" class="margin-title">Final steps</h2>
+      <h2 id="Final-steps" class="margin-title"><b class = "orange">Final steps</b></h2>
       <p class="margin">
-        Here we need to set <code>transition</code> property with our custom properties and we need
-        <code>transition-timing-function</code> for each, in this example we set <code>1000ms</code>.
+        Here we need to set <b class = "green">transition</b> property with our custom properties and we need
+        <b class = "green">transition-timing-function</b> for each, in this example we set <b class = "green">1000ms</b>.
       </p>
       <article class="bottom-line">
         <img src="svg/solution-code.png" alt="Global Variables">
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
       <p class="margin">
-        For last thing, we need to set <code>:hover</code> to make transition on hover.
+        For last thing, we need to set <b class = "green">:hover</b> to make transition on hover.
       </p>
       <article class="bottom-line">
         <img src="svg/solution-code-hover.png" alt="Global Variables">
       </article>
     </article>
+    </div>
 
+    <div class = "section-wrapper">
     <article>
       <p class="margin">
-        And voila! We now have out <code>linear-gradient</code> transition! Little complex but worth it.
+        And voila! We now have our <b class = "green">linear-gradient</b> transition! Little complex but worth it.
       </p>
       <article class="bottom-line">
         <button class="hover-button solution">HOVER</button>
         <p class="margin">
           That's it for transitions! Click button below to go onto next tutorial!
         </p>
+        <a href="animation.html" class = "margin">Click me!</a>
       </article>
     </article>
-    <a href="animation.html">Click me!</a>
+  </div>
   </section>
+</div>
+
+<footer class="sticky">
+  <ul class="f">
+    <li><a href="#" class="fa fa-facebook"></a></li>
+    <li><a href="#" class="fa fa-twitter"></a></li>
+    <li><a href="#" class="fa fa-instagram"></a></li>
+    <li><a href="#" class="fa fa-info"></a></li>
+  </ul>
+  <div id="footer-text">&copy 2023 Fed-guide. All rights reserved.</div>
+</footer>
+<div id="line">.</div>
 
 </body>
 

@@ -25,6 +25,23 @@
     translateY(-7em);
     animation: Float3 2s ease-in-out infinite alternate;
 }
+  
+.animation-example {
+    margin: 1em auto;
+    width: 3em;
+    height: 3em;
+    background: #0a0a0a;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
 
 @keyframes Float {
     to {
@@ -47,4 +64,15 @@
         translateX(5em)
         translateY(-7em);
     }
+}
+
+.animation-syntax {
+    animation:
+    name /*Name of the animation*/
+    duration /*How fast animation should run*/
+    timing-function /*Progress of animation over time*/
+    delay /*Defines time when animation should start*/
+    iteration-count /*How many times animation should repeat*/
+    direction /*Animation can go forward and backward*/
+    fill-mode; /*Defines styles before or after animation*/
 }
