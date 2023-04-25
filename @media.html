@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/@media.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="svg/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@media tutorial in CSS</title>
+    <title>Media tutorial in CSS</title>
 </head>
 
 <body>
@@ -28,15 +27,78 @@
         </nav>
     </header>
 
-    <h1 class="main">@media query tutorial</h1>
+    <section class="content">
+        <div class="section-wrapper-neutral">
+            <h1 class="main"><b class="pink">Media query tutorial</b></h1>
+        </div>
 
-    <h3 class="hyperlink-title">Today you will learn:</h3>
+        <div class="section-wrapper-neutral">
+            <h3 class="hyperlink-title"><b class="yellow">Today you will learn:</b></h3>
 
-    <ol class="hyperlink-list">
-        <li><a href="#@media-query">What is @media query?</a></li>
-        <li><a href="#responsive-web">What is responsive website?</a></li>
-        <li><a href="#@media-examples">How can we use it?</a></li>
-    </ol>
+            <ol class="hyperlink-list">
+                <li><a href="#@media-query">What is @media query and how can we use it?</a></li>
+                <li><a href="#responsive-web">What is responsive website?</a></li>
+                <li><a href="#pseudo-elements">What is pseudo element and how can we use it?</a></li>
+            </ol>
+        </div>
+
+        <section>
+            <div class="section-wrapper">
+                <article class="@media">
+                    <h2 id="@media-query" class="margin-title"><b class="orange">What is @media query and how can we use
+                            it?</b></h2>
+                    <p class="margin">
+                        <b class="green">Media queries</b> are used in CSS to apply different styles to a web page based
+                        on
+                        the characteristics
+                        of the device that is being used to view the page, such as <b class="green">screen size</b>, <b
+                            class="green">orientation</b>, and <b class="green">resolution</b>.
+                    </p>
+
+                    <article class="bottom-margin">
+                        <img src="svg/@media-query.png" alt="Media query example" />
+                        <p>
+                            In this example, the <b class="green">@media</b> rule is used to specify that the following
+                            styles should only apply
+                            to <b class="green">screens</b> with a <b class="green">maximum width of 767 pixels</b>. The
+                            <b class="green">screen</b> keyword specifies that the media type
+                            is a screen, and the <b class="green">(max-width: 767px)</b> condition specifies the maximum
+                            <b class="green">screen width</b>. You can use other conditions in <b class="green">media
+                                queries</b>, such as
+                            <b class="green">min-width, orientation, aspect-ratio, and resolution</b>, to create more
+                            targeted styles for
+                            different devices.
+                        </p>
+                    </article>
+                </article>
+            </div>
+
+            <div class="section-wrapper">
+                <article>
+                    <h2 id="responsive-web" class="margin-title"><b class="orange">What is responsive website?</b></h2>
+                    <p class="margin">
+                        <b class="green">Responsive website</b> is a website that is designed to <b
+                            class="green">adapt</b> and <b class="green">adjust</b> its layout and content to
+                        fit the screen size and orientation of the device being used to view it. The goal of a
+                        responsive website is to provide a consistent and optimal user experience across a range of
+                        devices, from <b class="green">desktops</b> and <b class="green">laptops</b> to <b
+                            class="green">tablets</b> and <b class="green">smartphones</b>.
+                    </p>
+
+                    <article class="bottom-margin">
+                        <img src="svg/responsive-website-example.jpg" alt="Responsive web design">
+                        <p>
+                            Responsive design techniques
+                            typically involve using <b class="green">flexible grids</b>, <b class="green">images</b>,
+                            and <b class="green">media queries</b> to adjust the <b class="green">layout</b> and
+                            <b class="green">content</b> of a web page based on the <b class="green">screen size</b> and
+                            <b class="green">resolution</b> of the device.
+                        </p>
+                    </article>
+                </article>
+            </div>
+        </section>
+    </section>
 
     <footer class="sticky">
         <ul class="f">

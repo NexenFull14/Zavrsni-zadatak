@@ -3,71 +3,68 @@
   --primary-color: #ffff;
 }
 
-
-html{
+html {
   height: 100%;
 }
 
+body {
+  margin: 0; /*Margin i padding na 0*/
+  padding: 0;
+  color: var(--primary-color); /*Boja slova i background image*/
+  background-image: url("../svg/slika.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif; /*font*/
+  font-size: 1.4rem;
+  border: none;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
+}
 
-  body {
-    margin: 0;  /*Margin i padding na 0*/
-    padding: 0;
-    color: var(--primary-color);  /*Boja slova i background image*/ 
-    background-image: url("../svg/slika.jpg");  
-    background-repeat: no-repeat;   
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
-    min-height: 100vh; 
-    font-family: 'Poppins', sans-serif; /*font*/
-    font-size: 1.4rem;
-    border: none;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column; 
-    overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
-  }
-  
-  .drop-shadow {
-    filter: drop-shadow(0 0 0.2rem #111);
-  }
+.drop-shadow {
+  filter: drop-shadow(0 0 0.2rem #111);
+}
 
-  .capital {
-    text-transform: capitalize;
-  }
-  
-  .hover {
-    height: 15rem;
-  }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .container {
-    padding: 22rem 0 2rem;
-    margin: 2rem 5rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-  }
-  
-  h1[class~=main] {
-    font-size: 40px;
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 0;
-    padding: 6rem 0;
-  }
+.capital {
+  text-transform: capitalize;
+}
 
+.hover {
+  height: 15rem;
+}
 
-  .stickynav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1em;
-  }
-    
-  .stickynav ul {
+.center {
+  text-align: center;
+}
+
+.container {
+  padding: 22rem 0 2rem;
+  margin: 2rem 5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+h1[class~="main"] {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 0;
+  padding: 6rem 0;
+}
+
+.stickynav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.stickynav ul {
   position: sticky;
   list-style: none;
   justify-content: center;
@@ -75,51 +72,49 @@ html{
   margin: 0;
   padding: 0;
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   border: none;
-  }
-  
+}
+
 #settings {
   height: fit-content;
   position: relative;
-  top: .7rem;
+  top: 0.7rem;
   left: 20rem;
 }
 
-  #settings:hover {
-    cursor: pointer;
-    animation: spin 0.4s ease-in-out 0.1s 1 normal none;
-  }
-  
-  #settings a {
-    text-decoration: none;
-    color: var(--primary-color);
-  }
+#settings:hover {
+  cursor: pointer;
+  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+}
 
-  .stickynav ul li
-  {
-    display: inline-block;
-    border: none;
-  }
-  
-  .stickynav ul li a 
-  {
-    border-radius: 50px;
-    border: none;
-    color: white;
-    display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.25rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .stickynav ul li a:hover {
-    background-color: white;
-    color: #0e1e2e;
-  }
+#settings a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.stickynav ul li {
+  display: inline-block;
+  border: none;
+}
+
+.stickynav ul li a {
+  border-radius: 50px;
+  border: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.stickynav ul li a:hover {
+  background-color: white;
+  color: #0e1e2e;
+}
 
 .drop-shadow {
   filter: drop-shadow(0 0 0.2rem #111);
@@ -169,10 +164,9 @@ h1[class~="main"] {
   }
 }
 
-
 h2 {
-    margin-top: -50px;
-    margin-bottom: 2.5em;
+  margin-top: -50px;
+  margin-bottom: 2.5em;
 }
 
 .margin {
@@ -183,23 +177,23 @@ h2 {
 
 #link {
   margin-bottom: 100px;
-  width:100%;
+  width: 100%;
   text-align: center;
   height: fit-content;
 }
 
 footer {
-    position: sticky;
-    top: 100%;
-    background-color: #0b1a2b;
-    padding-top: 3em;
-    padding-bottom: 3em;
-    width: 100%;
-    margin-top: auto;
-    margin-left: 0;
-    display: grid;
-    align-items: center;
-    justify-content: center;
+  position: sticky;
+  top: 100%;
+  background-color: #0b1a2b;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 100%;
+  margin-top: auto;
+  margin-left: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
 .f {
@@ -222,8 +216,6 @@ footer {
   padding: 0;
 }
 
-
-
 .f li a {
   border: none;
   color: #0b1b2a;
@@ -236,7 +228,7 @@ footer {
   transition: all 0.3s ease-in-out;
 }
 
- .fa-facebook {
+.fa-facebook {
   width: 17px;
   height: 17px;
   background-color: white;
@@ -290,16 +282,29 @@ footer {
   margin-top: 50px;
 }
 
-  .wrapper {
-    margin: 1em;
-    width: 35%;
-    margin-inline: 32.5%; 
-  }
+.wrapper {
+  margin: 1em;
+  width: 35%;
+  margin-inline: 32.5%;
+}
 
-  .wrapper-text {
-    padding: 10px;
-  }
+.wrapper-text {
+  padding: 10px;
+}
 
+.link-transition {
+  text-decoration: none;
+  width: fit-content;
+  font-weight: bold;
+  padding: 0.5em;
+  color: #fff;
+  transition: all 200ms linear;
+}
+
+.link-transition:hover {
+  background: #fff;
+  color: #0e1e2e;
+}
 
 @media screen and (max-width: 720px) {
   body {
@@ -320,7 +325,7 @@ footer {
     margin-inline: 20%;
   }
 }
-    
+
 @media screen and (max-width: 500px) {
   .sticky {
     display: none;

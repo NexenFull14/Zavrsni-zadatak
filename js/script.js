@@ -1,28 +1,42 @@
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", (event) => {
+  const resetButton = document.getElementById("reset");
 
-const toggleCheckbox = document.getElementById('theme-toggle');
-const body = document.body;
+  resetButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
 
-//Vraca dark/light mode na pocetak
-const userPref = localStorage.getItem('theme');
+  window.addEventListener("scroll", () => {
+    if(window.pageYOffset > 300) {
+      resetButton.style.display = "block";
+    }
+    else {
+      resetButton.style.display = "none";
+    }
+  });
 
-if (userPref === 'dark') {
-  toggleCheckbox.checked = true;
-  body.classList.add('dark-mode');
-}
+  const toggleCheckbox = document.getElementById("theme-toggle");
+  const body = document.body;
 
-toggleCheckbox.addEventListener('change', function() {
-  body.classList.toggle('dark-mode');
+  //Vraca dark/light mode na pocetak
+  const userPref = localStorage.getItem("theme");
 
-  // Cuva dark/light mode u local storage
-  if (body.classList.contains('dark-mode')) {
-    localStorage.setItem('theme', 'dark');
-  } else {
-    localStorage.setItem('theme', 'light');
+  if (userPref === "dark") {
+    toggleCheckbox.checked = true;
+    body.classList.add("dark-mode");
   }
-});
 
-const DropdownButton = document.querySelector('#hamburger-menu');
-const DropdownMenu = document.querySelector('.stickynav');
+  toggleCheckbox.addEventListener("change", function () {
+    body.classList.toggle("dark-mode");
 
+    // Cuva dark/light mode u local storage
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.setItem("theme", "light");
+    }
+  });
 });

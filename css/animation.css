@@ -1,78 +1,601 @@
-.floating-circle {
-    width: 1em;
-    height: 1em;
-    background: #0a0a0a;
-    border-radius: 50%;
+body {
+  margin: 0; /*Margin i padding na 0*/
+  padding: 0;
+  background-color: #0e1e2e;
+  color: #fff;
+  width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
+  min-height: 100vh;
+  height: fit-content;
+  font-family: "Poppins", sans-serif; /*font*/
+  font-size: 1.4rem;
+  border: none;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
 }
 
-.circle-animation1 {
-    transform: 
-    translateX(11.5em)
-    translateY(1.5em);
-    animation: Float 2s ease-in-out infinite alternate;
+.stickynav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
 }
 
-.circle-animation2 {
-    transform:
-    translateX(5em)
-    translateY(-6em);
-    animation: Float2 2s ease-in-out infinite alternate;
+.stickynav ul {
+  position: sticky;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  border: none;
 }
 
-.circle-animation3 {
-    transform:
-    translateX(11.5em)
-    translateY(-7em);
-    animation: Float3 2s ease-in-out infinite alternate;
+#settings {
+  height: fit-content;
+  position: relative;
+  top: 0.7rem;
+  left: 20rem;
 }
-  
-.animation-example {
-    margin: 1em auto;
-    width: 3em;
-    height: 3em;
-    background: #0a0a0a;
-    animation: spin 2s linear infinite;
+
+#settings:hover {
+  cursor: pointer;
+  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+}
+
+#settings a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.stickynav ul li {
+  display: inline-block;
+  border: none;
+}
+
+.stickynav ul li a {
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.stickynav ul li a:hover {
+  background-color: #fff;
+  color: #0e1e2e;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 0.2rem #111);
+}
+
+.button-style {
+  background-color: #0b1a2b;
+  color: var(--clr-1);
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+text {
+  transition-duration: 0.3s;
+  transition-duration: 500ms;
+}
+
+.capital {
+  text-transform: capitalize;
+}
+
+.hover {
+  height: 15rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  padding: 22rem 0 2rem;
+  margin: 2rem 5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+h1[class~="main"] {
+  text-align: center;
+  margin: 3rem 5rem;
+  padding: 6rem 0;
+  font-size: 4rem;
+}
+
+.list-number {
+  font-weight: bold;
+}
+
+.titles {
+  border: 1px solid black;
+  background-color: #4478a3;
+}
+
+img {
+  width: 30rem;
+  margin: 1rem auto;
+}
+
+.title {
+  display: block;
+  width: 20%;
+  margin-bottom: 12rem;
+}
+
+code {
+  background-image: var(--linear-gradient);
+  border-radius: 3px;
+  padding: 0.1rem;
+  margin: 0.2rem;
+  color: var(--clr-1);
+  font-size: 1.4rem;
+}
+
+.bottom-margin {
+  width: 70%;
+  margin: 0 auto 0;
+  padding: 0 0 4.5rem;
+}
+
+.zoom {
+  background-color: #13273a;
+  margin: 3rem auto;
+  padding: 0.2rem;
+  transition: transform 1s;
+  width: 7rem;
+  height: 7rem;
+}
+
+.zoom:hover {
+  transform: scale(1.5);
 }
 
 @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.hyperlink-list {
+  margin: auto 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.hyperlink-list a {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+.hyperlink-list a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.hyperlink-list a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.hyperlink-title {
+  margin: 1rem 3.5rem;
+}
+
+.margin-title {
+  margin: 2.5rem;
+  margin-top: 4.5rem;
+}
+
+.transition-example {
+  width: 24rem;
+  display: block;
+}
+
+.example-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.example {
+  text-align: center;
+  background-color: #0b1a2b;
+  border: none;
+  text-decoration: none;
+  color: var(--clr-1);
+  width: 100px;
+  height: 100px;
+  transition: width 2s;
+  display: block;
+}
+
+.example:hover {
+  width: 300px;
+}
+
+.transition {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-button {
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
+
+.hover-button:hover {
+  width: 100px;
+  height: 100px;
+}
+
+.border-radius {
+  transition: border-radius 0.4s;
+}
+
+.border-radius:hover {
+  border-radius: 50%;
+}
+
+.background-color {
+  transition: background-image 0.4s;
+}
+
+.background-color:hover {
+  background-image: linear-gradient(#09141f, #0d1c2b);
+  color: #1c3f55;
+}
+
+.margin {
+  margin: 3rem;
+}
+
+.tutorial-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+  background-color: var(--linear-gradient-clr1);
+}
+.tutorial-list a {
+  text-decoration: none;
+  color: var(--clr-1);
+  padding: 0.5rem;
+}
+.tutorial-list a:hover {
+  background-color: var(--clr-1);
+  color: var(--linear-gradient-clr1);
+}
+
+/*Main page*/
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: rgb(48, 47, 47);
+  --nav-pcolor: #204661;
+  --nav-scolor: #12354e;
+}
+
+.section-wrapper {
+  display: grid;
+  width: 80%;
+  background-color: #13273a;
+  border-radius: 40px;
+  margin: 50px auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4em;
+}
+
+.section-wrapper-neutral {
+  display: grid;
+  width: 80%;
+  border-radius: 40px;
+  margin: 50px auto;
+}
+
+.orange {
+  color: #e2b488;
+  font-weight: 600;
+}
+
+.green {
+  color: #76b992;
+  font-weight: normal;
+}
+
+.yellow {
+  color: #ccc28b;
+  font-weight: bold;
+}
+
+.pink {
+  color: #c77171;
+  font-weight: bold;
+}
+
+.content {
+  width: 90%;
+  align-self: center;
+  background-color: #0d1c2b;
+  border-radius: 20px;
+  margin-top: 0.5em;
+  margin-bottom: 0.01em;
+}
+
+#container {
+  background-color: red;
+  padding: 20px;
+  width: fit-content;
+  margin-top: 100px;
+}
+
+h1 {
+  margin: 100px;
+  font-size: 100px;
+}
+
+label {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer {
+  position: sticky;
+  top: 100%;
+  background-color: #0b1a2b;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  width: 100%;
+  margin-top: auto;
+  margin-left: 0;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.f {
+  margin-left: 500px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  margin-right: 5em;
+  margin-top: 1em;
+  width: auto;
+  z-index: 1;
+  height: fit-content;
+  text-decoration: none;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  margin: 0;
+  padding: 0;
+}
+
+.f li a {
+  border: none;
+  color: #0b1b2a;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.fa-facebook {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-twitter {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-instagram {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-info {
+  border: 1px solid #fff;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.fa-info li {
+  width: fit-content;
+}
+
+#line {
+  content-visibility: hidden;
+  width: 80%;
+  background-color: #fff;
+  align-self: center;
+  height: 1px;
+  margin-top: -100px;
+}
+
+#footer-text {
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  margin-top: 50px;
+}
+
+.wrapper {
+  margin: 1em;
+  width: 35%;
+  margin-inline: 32.5%;
+}
+
+.wrapper-text {
+  padding: 10px;
+}
+
+#simple-gradient {
+  background-image: linear-gradient(#0d1c2b, #baddff);
+}
+
+.floating-circle {
+  width: 1em;
+  height: 1em;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.circle-animation1 {
+  transform: translateX(11.5em) translateY(1.5em);
+  animation: Float 2s ease-in-out infinite alternate;
+}
+
+.circle-animation2 {
+  transform: translateX(5em) translateY(-6em);
+  animation: Float2 2s ease-in-out infinite alternate;
+}
+
+.circle-animation3 {
+  transform: translateX(11.5em) translateY(-7em);
+  animation: Float3 2s ease-in-out infinite alternate;
+}
+
+.animation-example {
+  margin: 1em auto;
+  width: 3em;
+  height: 3em;
+  background: #fff;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes Float {
-    to {
-        transform:
-        translateX(11.5em)
-        translateY(-5em);
-    }
+  to {
+    transform: translateX(11.5em) translateY(-5em);
+  }
 }
 
 @keyframes Float2 {
-    to {
-        transform:
-        translateX(11.5em);
-    }
+  to {
+    transform: translateX(11.5em);
+  }
 }
 
 @keyframes Float3 {
-    to {
-        transform:
-        translateX(5em)
-        translateY(-7em);
-    }
+  to {
+    transform: translateX(5em) translateY(-7em);
+  }
 }
 
-.animation-syntax {
-    animation:
-    name /*Name of the animation*/
-    duration /*How fast animation should run*/
-    timing-function /*Progress of animation over time*/
-    delay /*Defines time when animation should start*/
-    iteration-count /*How many times animation should repeat*/
-    direction /*Animation can go forward and backward*/
-    fill-mode; /*Defines styles before or after animation*/
+/*@media query*/
+
+@media screen and (max-width: 1000px) {
+  .examples {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+  code {
+    font-size: large;
+  }
+
+  h1[class~="main"] {
+    font-size: 30px;
+  }
+
+  .examples {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .transition-example {
+    width: 15rem;
+  }
+
+  .bottom-margin {
+    margin: 4rem;
+    padding: 0;
+  }
+
+  img {
+    width: 19.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 0.9rem;
+  }
 }

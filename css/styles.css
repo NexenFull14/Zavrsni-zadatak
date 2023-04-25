@@ -1,0 +1,22 @@
+.link-transition {
+  text-decoration: none;
+  background: #0e1e2e;
+  width: fit-content;
+  font-weight: bold;
+  padding: 0.5em;
+  color: #fff;
+  transition: all 250ms linear;
+}
+
+.link-transition:hover {
+  background: #fff;
+  color: #0e1e2e;
+  transform: translate(-3px, -3px);
+  box-shadow: #0b1a2b 8px 8px;
+}
+
+.link-transition:focus {
+  box-shadow: none;
+  background: #fff;
+  color: #0e1e2e;
+}

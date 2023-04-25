@@ -93,13 +93,25 @@ html{
 
       .container {
         display: grid;
-        margin-inline: 42.5%;
-        margin-top: 100px;
+        align-self: center;
+        width: fit-content;
+        margin-top: 10rem;
         background-color: #0b1a2b;
-        width: 15%;
-        height: fit-content;
         text-align: center;
         border-radius: 20px;
+      }
+
+      .container > a {
+        text-decoration: none;
+        color: #fff;
+        padding: .5rem;
+        transition: all 200ms linear;
+        border-radius: 20px;
+      }
+
+      .container > a:hover {
+        background: #fff;
+        color: #0b1b2a;
       }
 
       footer {

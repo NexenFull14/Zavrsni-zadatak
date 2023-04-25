@@ -4,13 +4,13 @@
 @property --clr-1 {
   syntax: "<color>";
   inherits: true;
-  initial-value: #dadfc7;
+  initial-value: #13163f;
 }
 
 @property --clr-2 {
   syntax: "<color>";
   inherits: true;
-  initial-value: #9aaae0;
+  initial-value: #030101;
 }
 
 :root {
@@ -21,7 +21,7 @@
 
 .solution {
   background-image: linear-gradient(var(--clr-1), var(--clr-2));
-  transition: --clr-1 1000ms, --clr-2 1000ms;
+  transition: --clr-1 1000ms, --clr-2 1000ms, color 1000ms;
   border: none;
   font-weight: bold;
 }
@@ -29,6 +29,7 @@
 .solution:hover {
   --clr-1: #030101;
   --clr-2: #13163f;
+  color: white;
 }
 
 body {
@@ -46,6 +47,19 @@ body {
     display: flex;
     flex-direction: column; 
     overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
+  }
+
+  #reset {
+    display: none;
+    aspect-ratio: 1 / 1;
+    width: 3.5rem;
+    border: none;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
   }
 
   .stickynav {
@@ -182,7 +196,7 @@ code {
   font-size: 1.4rem;
 }
 
-.bottom-line {
+.bottom-margin {
   width: 70%;
   margin: 0 auto 0;
   padding: 0 0 4.5rem;
@@ -250,31 +264,53 @@ code {
 
 .transition-example {
   width: 24rem;
-  margin: 0;
   display: block;
+}
+
+.example-div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-around;
+  gap: 2.5rem;
+}
+
+.transition > .example-div {
+  gap: 15rem;
+}
+
+.center-div {
+  margin: 5rem auto;
 }
 
 .example {
   text-align: center;
-  background-color: #306283;
+  background-color: #0b1a2b;
+  border: none;
   text-decoration: none;
   color: var(--clr-1);
   width: 100px;
   height: 100px;
   transition: width 2s;
   display: block;
-  margin: 4rem 0;
 }
 
 .example:hover {
   width: 300px;
 }
 
+.transition {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .hover-button {
-  display: inline-block;
+  display: inline-grid;
+  justify-content: center;
+  align-items: center;
   width: 100px;
   height: 100px;
-  margin: 4rem 2rem 4rem 25rem;
 }
 
 .hover-button:hover {
@@ -292,11 +328,13 @@ code {
 
 .background-color {
   transition: background-image 0.4s;
+  background-image: linear-gradient(var(--clr-1), var(--clr-2));
+  color: var(--clr-2);
 }
 
 .background-color:hover {
-  background-image: linear-gradient(#09141f, #0D1C2B);
-  color: #1c3f55;
+  background-image: linear-gradient(#030101, #13163f);
+  color: #fff;
 }
 
 .margin {
@@ -342,6 +380,8 @@ h1 {
   background-color: #13273a;
   border-radius: 40px;
   margin: 50px auto;
+  justify-content: center;
+  align-items: center;
   margin-top: 4em;
 }
 
@@ -502,7 +542,9 @@ margin-top: 50px;
 #simple-gradient {
   background-image: linear-gradient(#0D1C2B,#baddff);
 }
+
 /*@media query*/
+
 
 @media screen and (max-width: 1000px) {
   .examples {
@@ -529,6 +571,19 @@ margin-top: 50px;
 
   nav {
     display: none;
+  }
+
+  .transition-example {
+    width: 15rem;
+  }
+
+  .bottom-margin {
+    margin: 4rem;
+    padding: 0;
+  }
+
+  img {
+    width: 19.5rem;
   }
 }
 

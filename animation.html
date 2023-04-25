@@ -2,108 +2,116 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/animation.css" />
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="shortcut icon" href="svg/favicon.ico" type="image/x-icon" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animations in CSS</title>
 </head>
 
 <body>
-    <nav class="sticky">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="tutorials.html">Tutorials</a></li>
-        </ul>
-        
-        <i style="font-size:24px" id="settings" class="fa">&#xf013;</i>
-    </nav>
+    <header>
+        <nav class="stickynav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="info.html">Info</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+            </ul>
 
-    <h1 class="main">CSS animation tutorial</h1>
+            <i style="font-size: 24px" id="settings" class="fa">&#xf013;</i>
+        </nav>
+    </header>
 
-    <div class="bottom-line">
-        <div class="floating-circle circle-animation1"></div>
-        <div class="floating-circle circle-animation2"></div>
-        <div class="floating-circle circle-animation3"></div>
+    <div class="content">
+        <h1 class="main"><b class="pink">CSS animation tutorial</b></h1>
+
+        <h3 class="hyperlink-title">Today you will learn:</h3>
+
+        <ol class="hyperlink-list">
+            <li><a href="#Animation">What is animation?</a></li>
+            <li><a href="#@keyframes">@keyframes</a></li>
+            <li><a href="#animation-syntax">Syntax of animation property</a></li>
+        </ol>
+
+        <section>
+            <div class="section-wrapper">
+                <article class="animation">
+                    <h2 id="Animation" class="margin-title"><b class="orange">What is animation?</b></h2>
+                    <p class="margin">
+                        <b class="green">CSS animations</b> are a way to add motion or change to an
+                        element on a web page. Animations can be used to create more engaging
+                        and interactive user experiences, and they can help draw attention to
+                        specific content on the page.
+                    </p>
+                    <article class="bottom-margin">
+                        <img src="svg/animation-example.png" alt="Animation example" />
+                        <p>Output:</p>
+                        <div class="animation-example"></div>
+                    </article>
+                </article>
+            </div>
+
+            <div class="section-wrapper">
+                <article>
+                    <h2 id="@keyframes" class="margin-title"><b class="orange">@keyframes</b></h2>
+                    <p class="margin">
+                        At its most basic level, @keyframes is a rule in CSS that defines a
+                        set of CSS property-value pairs to be applied to an element at
+                        specific points in time during an animation.
+                    </p>
+
+                    <article class="bottom-margin">
+                        <img src="svg/@keyframes-example.png" alt="Keyframes Example" />
+                        <p>
+                            Animations can make web content more engaging and interactive, and
+                            CSS provides a powerful set of tools for creating them.
+                        </p>
+                    </article>
+                </article>
+            </div>
+
+            <div class="section-wrapper">
+                <article>
+                    <h2 id="animation-syntax" class="margin-title"><b class="orange">Syntax of animation property</b>
+                    </h2>
+                    <p class="margin">
+                        The <b class="green">syntax for CSS animation</b> involves using the
+                        <b class="green">animation</b> property to specify the <b class="green">name</b> of
+                        the animation, its <b class="green">duration</b>,
+                        <b class="green">timing function</b>, <b class="green">delay</b>,
+                        <b class="green">iteration count</b>, <b class="green">direction</b>,
+                        <b class="green">fill mode</b>, and <b class="green">play state</b>.
+                    </p>
+
+                    <article class="bottom-margin">
+                        <img src="svg/animation-syntax.png" alt="Example Image" />
+                        <p class="margin">
+                            That's it from animation tutorial! Click link below to hop onto next
+                            tutorial!
+                        </p>
+                    </article>
+                </article>
+                <a href="@media.html" class="margin link-transition">Click me!</a>
+            </div>
+        </section>
     </div>
 
-    <h3 class="hyperlink-title">Today you will learn:</h3>
 
-    <ol class="hyperlink-list">
-        <li><a href="#Animation">What is animation?</a></li>
-        <li><a href="#@keyframes">@keyframes</a></li>
-        <li><a href="#animation-syntax">Syntax of animation property</a></li>
-    </ol>
-
-    <section>
-        <article class="animation">
-            <h2 id="Animation" class="margin-title">What is animation?</h2>
-            <p class="margin">
-                <code>CSS animations</code> are a way to add motion or change to an element on a web page. Animations
-                can be used to
-                create more engaging and interactive user experiences, and they can help draw attention to specific
-                content on the page.
-            </p>
-            <article class="bottom-line">
-                <img src="svg/animation-example.png" alt="Animation example">
-                <p>Output:</p>
-                <div class="animation-example"></div>
-            </article>
-        </article>
-
-        <article>
-            <h2 id="@keyframes" class="margin-title">@keyframes</h2>
-            <p class="margin">
-                At its most basic level, @keyframes is a rule in CSS that defines a set of CSS property-value pairs to
-                be
-                applied to an element at specific points in time during an animation.
-            </p>
-
-            <article class="bottom-line">
-                <img src="svg/@keyframes-example.png" alt="Keyframes Example">
-                <p>
-                    Animations can make web content more engaging and interactive, and CSS provides a powerful set of
-                    tools
-                    for creating them.
-                </p>
-            </article>
-        </article>
-
-        <article>
-            <h2 id="animation-syntax" class="margin-title">Syntax of animation property</h2>
-            <p class="margin">
-                The <code>syntax for CSS animation</code> involves using the <code>animation</code> property to specify
-                the <code>name</code> of the
-                animation, its <code>duration</code>, <code>timing function</code>, <code>delay</code>,
-                <code>iteration count</code>, <code>direction</code>, <code>fill mode</code>, and
-                <code>play state</code>.
-            </p>
-
-            <article class="bottom-line">
-                <img src="svg/animation-syntax.png" alt="Example Image">
-                <p class="margin">
-                    That's it from animation tutorial! Click link below to hop onto next tutorial!
-                </p>
-            </article>
-        </article>
-        <a href="@media.html">Click me!</a>
-    </section>
 
     <footer class="sticky">
         <ul class="f">
-          <li><a href="#" class="fa fa-facebook"></a></li>
-          <li><a href="#" class="fa fa-twitter"></a></li>
-          <li><a href="#" class="fa fa-instagram"></a></li>
-          <li><a href="#" class="fa fa-info"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="#" class="fa fa-instagram"></a></li>
+            <li><a href="#" class="fa fa-info"></a></li>
         </ul>
         <div id="footer-text">&copy 2023 Fed-guide. All rights reserved.</div>
-      </footer>
-      <div id="line">.</div>
+    </footer>
+    <div id="line">.</div>
 </body>
 
 </html>
