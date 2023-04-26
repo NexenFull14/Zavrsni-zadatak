@@ -1,3 +1,140 @@
+body {
+  margin: 0; /*Margin i padding na 0*/
+  padding: 0;
+  background-color: #0e1e2e;
+  color: #fff;
+  width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
+  min-height: 100vh;
+  height: fit-content;
+  font-family: "Poppins", sans-serif; /*font*/
+  font-size: 1.4rem;
+  border: none;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
+}
+
+.stickynav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.stickynav ul {
+  position: sticky;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  border: none;
+}
+
+.stickynav ul li {
+  display: inline-block;
+  border: none;
+}
+
+.stickynav ul li a {
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.stickynav ul li a:hover {
+  background-color: #fff;
+  color: #0e1e2e;
+}
+
+#reset {
+  display: none;
+  aspect-ratio: 1 / 1;
+  width: 3.5rem;
+  border: none;
+  border-radius: 20px;
+  background: #fff;
+  cursor: pointer;
+  z-index: 999;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#arrow-up {
+  aspect-ratio: 1 / 1;
+  scale: 1.7;
+}
+
+.stickynav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.stickynav ul {
+  position: sticky;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0.5em;
+  border: none;
+}
+
+.stickynav ul li {
+  display: inline-block;
+  border: none;
+}
+
+.stickynav ul li a {
+  border-radius: 50px;
+  border: none;
+  color: white;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 1.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.stickynav ul li a:hover {
+  background-color: white;
+  color: #0e1e2e;
+}
+
+#settings {
+  height: fit-content;
+  position: relative;
+  top: 0.7rem;
+  left: 20rem;
+}
+
+#settings:hover {
+  cursor: pointer;
+  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+}
+
+#settings a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
 .link-transition {
   text-decoration: none;
   background: #0e1e2e;
@@ -11,12 +148,66 @@
 .link-transition:hover {
   background: #fff;
   color: #0e1e2e;
-  transform: translate(-3px, -3px);
-  box-shadow: #0b1a2b 8px 8px;
+  translate: -2px -2px;
+  box-shadow: #0b1a2b 6px 6px;
 }
 
 .link-transition:focus {
   box-shadow: none;
   background: #fff;
   color: #0e1e2e;
+  translate: 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .examples {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+  code {
+    font-size: large;
+  }
+
+  h1[class~="main"] {
+    font-size: 30px;
+  }
+
+  .examples {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .transition-example {
+    width: 15rem;
+  }
+
+  .bottom-margin {
+    margin: 4rem;
+    padding: 0;
+    width: 20rem;
+  }
+
+  img {
+    width: 19.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #settings {
+    display: none;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
 }

@@ -31,56 +31,6 @@
   --clr-2: #13163f;
   color: white;
 }
-
-body {
-    margin: 0;  /*Margin i padding na 0*/
-    padding: 0;
-    background-color: #0e1e2e;
-    color: white;
-    width: 100vw; /*vh i vw se koriste kako bi se stavila sirina ili visina, ne gledaju margine i padding*/
-    min-height: 100vh;
-    height: fit-content; 
-    font-family: 'Poppins', sans-serif; /*font*/
-    font-size: 1.4rem;
-    border: none;
-    scroll-behavior: smooth;
-    display: flex;
-    flex-direction: column; 
-    overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
-  }
-
-  #reset {
-    display: none;
-    aspect-ratio: 1 / 1;
-    width: 3.5rem;
-    border: none;
-    border-radius: 20px;
-    background: #fff;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
-
-  .stickynav {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 1em;
-  }
-    
-  .stickynav ul {
-  position: sticky;
-  list-style: none;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: .5em;
-  border: none;
-  }
-  
 #settings {
   height: fit-content;
   position: relative;
@@ -138,10 +88,6 @@ body {
 text {
   transition-duration: 0.3s;
   transition-duration: 500ms;
-}
-
-.capital {
-  text-transform: capitalize;
 }
 
 .hover {
@@ -546,12 +492,7 @@ margin-top: 50px;
 /*@media query*/
 
 
-@media screen and (max-width: 1000px) {
-  .examples {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
+
 @media screen and (max-width: 720px) {
   body {
     font-size: medium;
@@ -588,7 +529,5 @@ margin-top: 50px;
 }
 
 @media screen and (max-width: 420px) {
-  body {
-    font-size: 0.9rem;
-  }
+  
 }

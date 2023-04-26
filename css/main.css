@@ -30,10 +30,6 @@ body {
   filter: drop-shadow(0 0 0.2rem #111);
 }
 
-.capital {
-  text-transform: capitalize;
-}
-
 .hover {
   height: 15rem;
 }
@@ -126,10 +122,6 @@ h1[class~="main"] {
   font-weight: bold;
   text-align: center;
   border: none;
-}
-
-.capital {
-  text-transform: capitalize;
 }
 
 .hover {
@@ -339,7 +331,7 @@ footer {
     display: none;
   }
 
-  .stickynav #settings {
+  #settings {
     display: none;
   }
 

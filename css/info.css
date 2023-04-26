@@ -17,10 +17,6 @@ body {
     overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
   }
   
-  .capital {
-    text-transform: capitalize;
-  }
-  
   .hover {
     height: 15rem;
   }
