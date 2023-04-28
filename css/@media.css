@@ -15,14 +15,6 @@ text {
   transition-duration: 500ms;
 }
 
-.hover {
-  height: 15rem;
-}
-
-.center {
-  text-align: center;
-}
-
 .container {
   padding: 22rem 0 2rem;
   margin: 2rem 5rem;
@@ -206,26 +198,6 @@ h1 {
   margin: 50px auto;
 }
 
-.orange {
-  color: #e2b488;
-  font-weight: 600;
-}
-
-.green {
-  color: #76b992;
-  font-weight: normal;
-}
-
-.yellow {
-  color: #ccc28b;
-  font-weight: bold;
-}
-
-.pink {
-  color: #c77171;
-  font-weight: bold;
-}
-
 .content {
   width: 90%;
   align-self: center;
@@ -390,5 +362,34 @@ footer {
 
   img {
     width: 19.5rem;
+  }
+}
+
+.pseudo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5em;
+}
+
+.coming-soon {
+  display: block;
+  margin: 2em auto;
+  background: linear-gradient(to right, #76b992 20%, #ccc28b 30%, #e2b488 70%, #c77171 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textAnimation 7s ease-in-out infinite alternate;
+}
+
+@keyframes textAnimation {
+  to {
+    background-position: 200%;
   }
 }

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0; /*Margin i padding na 0*/
   padding: 0;
@@ -9,10 +13,17 @@ body {
   font-family: "Poppins", sans-serif; /*font*/
   font-size: 1.4rem;
   border: none;
-  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   overflow-x: hidden; /*Sklanjanje skrola koji ide po x osi*/
+}
+
+.hover {
+  height: 15rem;
+}
+
+.center {
+  text-align: center;
 }
 
 .stickynav {
@@ -157,6 +168,31 @@ body {
   background: #fff;
   color: #0e1e2e;
   translate: 0 0;
+}
+
+.small-image {
+  height: auto;
+  width: 60%;
+}
+
+.orange {
+  color: #e2b488;
+  font-weight: 600;
+}
+
+.green {
+  color: #76b992;
+  font-weight: normal;
+}
+
+.yellow {
+  color: #ccc28b;
+  font-weight: bold;
+}
+
+.pink {
+  color: #c77171;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 1000px) {

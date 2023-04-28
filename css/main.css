@@ -30,10 +30,6 @@ body {
   filter: drop-shadow(0 0 0.2rem #111);
 }
 
-.hover {
-  height: 15rem;
-}
-
 .center {
   text-align: center;
 }
@@ -124,9 +120,7 @@ h1[class~="main"] {
   border: none;
 }
 
-.hover {
-  height: 15rem;
-}
+
 
 .center {
   text-align: center;
